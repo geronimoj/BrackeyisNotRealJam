@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 1977463493}
   - component: {fileID: 1977463496}
   - component: {fileID: 1977463495}
+  - component: {fileID: 1977463497}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -499,6 +500,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977463492}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1977463497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977463492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 276166f531141de4baaa23d8fd33de95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2023949179
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +584,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
