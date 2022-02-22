@@ -8,7 +8,7 @@ using TMPro;
 /// </summary>
 public class Player : MonoBehaviour
 {
-    Player _instance;
+    public static Player _instance;
     Rigidbody2D _playerRB;
     Camera _mCam;
 
