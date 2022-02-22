@@ -5,27 +5,27 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraWorldDisplayer : MonoBehaviour
 {
-    public LayerMask worldAMask;
-    public LayerMask worldBMask;
+    public LayerMask m_worldAMask;
+    public LayerMask m_worldBMask;
 
-    private Camera cam;
-    private bool inWorldA;
+    private Camera _cam;
+    private bool _inWorldA;
 
     private void Awake()
     {
-        cam = GetComponent<Camera>();
+        _cam = GetComponent<Camera>();
     }
 
     void Update()
     {
-        if (inWorldA != DimensionManager.inWorldA)
+        if (_inWorldA != DimensionManager.s_inWorldA)
         {   //Only display current dimension
-            if (DimensionManager.inWorldA)
-                cam.cullingMask = worldAMask;
+            if (DimensionManager.s_inWorldA)
+                _cam.cullingMask = m_worldAMask;
             else
-                cam.cullingMask = worldBMask;
+                _cam.cullingMask = m_worldBMask;
 
-            inWorldA = DimensionManager.inWorldA;
+            _inWorldA = DimensionManager.s_inWorldA;
         }
     }
 }

@@ -6,22 +6,22 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class DimensionProjectile : MonoBehaviour
 {
-    public bool ignorePlayer = true;
-    private DimensionTracker dt = null;
+    public bool m_ignorePlayer = true;
+    private DimensionTracker _dt = null;
 
     private void Awake()
     {
-        dt = GetComponent<DimensionTracker>();
+        _dt = GetComponent<DimensionTracker>();
     }
 
     public void SetDimension(bool worldA)
     {
-        dt.SetDimension(worldA);
+        _dt.SetDimension(worldA);
     }
 
     private void OnCollisionEnter(Collision collision)
     {   //Check if we should ignore the player
-        if (ignorePlayer && collision.transform.CompareTag("Player"))
+        if (m_ignorePlayer && collision.transform.CompareTag("Player"))
             return;
         //Attempt to get dimension tracker
         var tracker = collision.transform.gameObject.GetComponent<DimensionTracker>();

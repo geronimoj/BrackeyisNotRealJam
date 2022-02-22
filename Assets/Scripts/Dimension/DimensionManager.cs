@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class DimensionManager : MonoBehaviour
 {
-    public static bool inWorldA = true;
+    public static bool s_inWorldA = true;
 }

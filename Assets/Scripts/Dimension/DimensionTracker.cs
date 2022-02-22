@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DimensionTracker : MonoBehaviour
 {
-    public bool inWorldA = true;
+    public bool m_inWorldA = true;
 
     private void Awake()
     {   //Make sure on correct layer
@@ -13,15 +13,15 @@ public class DimensionTracker : MonoBehaviour
 
     public void ToggleWorld()
     {
-        inWorldA = !inWorldA;
+        m_inWorldA = !m_inWorldA;
 
-        SetDimension(inWorldA);
+        SetDimension(m_inWorldA);
     }
 
     public void SetDimension(bool worldA)
     {
-        inWorldA = worldA;
-        string world = inWorldA ? "WorldA" : "WorldB";
+        m_inWorldA = worldA;
+        string world = m_inWorldA ? "WorldA" : "WorldB";
         gameObject.layer = LayerMask.NameToLayer(world);
     }
 }
