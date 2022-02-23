@@ -11,7 +11,7 @@ public class ArmRotation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _player = Player._instance;
+        _player = Player.Instance;
     }
 
     // Update is called once per frame

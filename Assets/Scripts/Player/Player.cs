@@ -8,9 +8,8 @@ using TMPro;
 /// </summary>
 public class Player : MonoBehaviour
 {
-    public static Player _instance;
+    public static Player Instance;
     Rigidbody2D _playerRB;
-    Camera _mCam;
 
     public LayerMask Ground;
     public Transform FeetPos;
@@ -24,9 +23,9 @@ public class Player : MonoBehaviour
     #region Start/Updates
     void Awake()
     {
-        if (_instance == null)
+        if (Instance == null)
         {
-            _instance = this;
+            Instance = this;
         }
         else
         {
@@ -37,7 +36,6 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //_mCam = Camera.main.GetComponent<MainCamera>();
         _playerRB = GetComponent<Rigidbody2D>();
     }
 
