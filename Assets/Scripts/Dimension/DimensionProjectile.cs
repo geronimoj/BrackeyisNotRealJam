@@ -20,7 +20,8 @@ public class DimensionProjectile : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {   //Check if we should ignore the player
+    {   
+        //Check if we should ignore the player
         if (m_ignorePlayer && collision.transform.CompareTag("Player"))
             return;
         //Attempt to get dimension tracker

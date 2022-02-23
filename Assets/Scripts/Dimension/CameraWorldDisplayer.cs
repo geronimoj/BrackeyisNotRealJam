@@ -19,7 +19,8 @@ public class CameraWorldDisplayer : MonoBehaviour
     void Update()
     {
         if (_inWorldA != DimensionManager.s_inWorldA)
-        {   //Only display current dimension
+        {   
+            //Only display current dimension
             if (DimensionManager.s_inWorldA)
                 _cam.cullingMask = m_worldAMask;
             else

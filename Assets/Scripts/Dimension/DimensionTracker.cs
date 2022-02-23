@@ -7,7 +7,8 @@ public class DimensionTracker : MonoBehaviour
     public bool m_inWorldA = true;
 
     private void Awake()
-    {   //Make sure on correct layer
+    {   
+        //Make sure on correct layer
         SetDimension(true);
     }
 
