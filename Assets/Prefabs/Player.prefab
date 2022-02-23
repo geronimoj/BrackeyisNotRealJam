@@ -256,6 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7891120479881847734}
   - component: {fileID: 7891120479881847735}
+  - component: {fileID: 2023949182}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -330,6 +331,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2023949182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891120479881847729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a9e91c3ffb17842ba8afb7b46459a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bullet: {fileID: 6871442052590015949, guid: 56bed9ece249fb54abe2a3fd74f94cea, type: 3}
 --- !u!1 &7891120479920975173
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +359,7 @@ GameObject:
   - component: {fileID: 7891120479920975198}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,7 +449,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

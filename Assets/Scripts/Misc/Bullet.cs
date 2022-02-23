@@ -31,13 +31,13 @@ public class Bullet : MonoBehaviour
         transform.position += transform.right * BulletSpeed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.CompareTag("Player"))
-        {
-            return;
-        }
-
-        Destroy(gameObject);
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.CompareTag("Player"))
+    //    {
+    //        return;
+    //    }
+    //
+    //    Destroy(gameObject);
+    //}
 }

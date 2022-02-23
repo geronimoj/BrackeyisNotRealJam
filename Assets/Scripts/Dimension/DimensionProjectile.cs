@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(DimensionTracker))]
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Collider2D))]
 public class DimensionProjectile : MonoBehaviour
 {
     public bool m_ignorePlayer = true;
@@ -19,7 +19,7 @@ public class DimensionProjectile : MonoBehaviour
         _dt.SetDimension(worldA);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {   
         //Check if we should ignore the player
         if (m_ignorePlayer && collision.transform.CompareTag("Player"))
