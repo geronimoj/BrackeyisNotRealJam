@@ -29,5 +29,7 @@ public class DimensionProjectile : MonoBehaviour
         //Toggle the world of the object
         if (tracker)
             tracker.ToggleWorld();
+        //Destroy the projectile
+        Destroy(gameObject);
     }
 }
