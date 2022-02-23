@@ -9,20 +9,37 @@ public class DimensionTracker : MonoBehaviour
     private void Awake()
     {   
         //Make sure on correct layer
-        SetDimension(true);
+        SetDimension(gameObject, true);
+
+        ToggleChildren(true);
     }
 
     public void ToggleWorld()
     {
         m_inWorldA = !m_inWorldA;
 
-        SetDimension(m_inWorldA);
+        SetDimension(gameObject, m_inWorldA);
+        ToggleChildren(m_inWorldA);
     }
 
-    public void SetDimension(bool worldA)
+    public void SetDimension(GameObject obj, bool worldA)
     {
         m_inWorldA = worldA;
         string world = m_inWorldA ? "WorldA" : "WorldB";
-        gameObject.layer = LayerMask.NameToLayer(world);
+        obj.layer = LayerMask.NameToLayer(world);
+    }
+
+    /// <summary>
+    /// Toggles all the child objects current dimension
+    /// </summary>
+    void ToggleChildren(bool worldA)
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<DimensionTracker>())
+            {
+                SetDimension(child.gameObject, worldA);
+            }
+        }
     }
 }

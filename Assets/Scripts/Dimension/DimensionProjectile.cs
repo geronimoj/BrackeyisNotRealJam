@@ -16,7 +16,7 @@ public class DimensionProjectile : MonoBehaviour
 
     public void SetDimension(bool worldA)
     {
-        _dt.SetDimension(worldA);
+        _dt.SetDimension(gameObject, worldA);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
