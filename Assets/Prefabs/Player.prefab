@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 7891120479821543484}
   - component: {fileID: 7891120479821543487}
   - component: {fileID: 7891120479821543474}
+  - component: {fileID: 1947949305}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -246,6 +247,24 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1947949305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891120479821543486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afb7b7584f7aba4983e6b43cc00f7e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_worldAMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_worldBMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &7891120479881847729
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +376,7 @@ GameObject:
   - component: {fileID: 7891120479920975195}
   - component: {fileID: 7891120479920975194}
   - component: {fileID: 7891120479920975198}
+  - component: {fileID: 2130054549}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -500,3 +520,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &2130054549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891120479920975173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a81ade62084b3f4ebbf584755c27e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inWorldA: 1
