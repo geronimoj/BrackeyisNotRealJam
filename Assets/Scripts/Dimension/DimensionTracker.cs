@@ -11,7 +11,7 @@ public class DimensionTracker : MonoBehaviour
     {
         _isPlayer = GetComponent<Player>() != null;
         //Make sure on correct layer
-        SetDimension(gameObject, true);
+        SetDimension(gameObject, m_inWorldA);
 
         ToggleChildren(true);
     }
