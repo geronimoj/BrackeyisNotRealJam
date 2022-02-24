@@ -26,7 +26,7 @@ public class DimensionProjectile : MonoBehaviour
         if (m_ignorePlayer && collision.transform.CompareTag("Player"))
             return;
         //Check if the object is a mirror
-        if(collision.gameObject.layer == Mirror)
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Mirror"))
         {
             m_ignorePlayer = false;
             gameObject.transform.right = Vector3.Reflect(gameObject.transform.right, -collision.transform.right);

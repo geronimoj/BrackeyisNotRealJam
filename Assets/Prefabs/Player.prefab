@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7891120478245277580}
   - component: {fileID: 1079928253}
   - component: {fileID: 1079928254}
+  - component: {fileID: 2004643793}
   m_Layer: 0
   m_Name: FeetPos
   m_TagString: Untagged
@@ -61,6 +62,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7063d79943ed27f4980bb4926e594a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2004643793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891120478245277583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d583072a9170fe849b2318b66840f9aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inWorldA: 1
 --- !u!1 &7891120479800676878
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,6 +87,7 @@ GameObject:
   - component: {fileID: 7891120479800676866}
   - component: {fileID: 7891120479800676877}
   - component: {fileID: 7891120479800676867}
+  - component: {fileID: 523082695}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -158,6 +173,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 276166f531141de4baaa23d8fd33de95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &523082695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7891120479800676878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d583072a9170fe849b2318b66840f9aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_inWorldA: 1
 --- !u!1 &7891120479821543486
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,13 +319,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_worldAMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 759
   m_worldBMask:
     serializedVersion: 2
-    m_Bits: 256
-  m_mirrorMask:
-    serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 887
 --- !u!1 &7891120479881847729
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +334,7 @@ GameObject:
   - component: {fileID: 7891120479881847734}
   - component: {fileID: 7891120479881847735}
   - component: {fileID: 2023949182}
-  - component: {fileID: 2023949183}
+  - component: {fileID: 934610604}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -397,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 6871442052590015949, guid: 56bed9ece249fb54abe2a3fd74f94cea, type: 3}
---- !u!114 &2023949183
+--- !u!114 &934610604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -406,7 +431,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7891120479881847729}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a81ade62084b3f4ebbf584755c27e75, type: 3}
+  m_Script: {fileID: 11500000, guid: d583072a9170fe849b2318b66840f9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_inWorldA: 1

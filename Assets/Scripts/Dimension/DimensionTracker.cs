@@ -5,9 +5,11 @@ using UnityEngine;
 public class DimensionTracker : MonoBehaviour
 {
     public bool m_inWorldA = true;
+    private bool _isPlayer = false;
 
     private void Awake()
-    {   
+    {
+        _isPlayer = GetComponent<Player>() != null;
         //Make sure on correct layer
         SetDimension(gameObject, true);
 
@@ -33,6 +35,9 @@ public class DimensionTracker : MonoBehaviour
         {
             obj.transform.parent.gameObject.layer = obj.layer;
         }
+        //If player, track player dimension
+        if (_isPlayer)
+            DimensionManager.s_inWorldA = worldA;
     }
 
     /// <summary>
