@@ -144,3 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignorePlayer: 1
+  Mirror:
+    serializedVersion: 2
+    m_Bits: 512

@@ -7,6 +7,7 @@ public class CameraWorldDisplayer : MonoBehaviour
 {
     public LayerMask m_worldAMask;
     public LayerMask m_worldBMask;
+    public LayerMask m_mirrorMask;
 
     private Camera _cam;
     private bool _inWorldA;

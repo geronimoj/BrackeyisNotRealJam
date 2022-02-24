@@ -30,7 +30,7 @@ public class DimensionProjectile : MonoBehaviour
         {
             m_ignorePlayer = false;
             gameObject.transform.right = Vector3.Reflect(gameObject.transform.right, -collision.transform.right);
-
+            Debug.Log("Ping");
             return;
         }
         //Attempt to get dimension tracker
