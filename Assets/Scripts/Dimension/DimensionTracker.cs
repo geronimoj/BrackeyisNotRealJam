@@ -27,6 +27,12 @@ public class DimensionTracker : MonoBehaviour
         m_inWorldA = worldA;
         string world = m_inWorldA ? "WorldA" : "WorldB";
         obj.layer = LayerMask.NameToLayer(world);
+
+        //Toggle the parent object to this world if it exists
+        if(obj.transform.parent != null && obj.transform.parent.GetComponent<DimensionTracker>())
+        {
+            obj.transform.parent.gameObject.layer = obj.layer;
+        }
     }
 
     /// <summary>
