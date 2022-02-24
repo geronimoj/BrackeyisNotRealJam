@@ -11,10 +11,16 @@ public class Player : MonoBehaviour
     public static Player Instance;
     Rigidbody2D _playerRB;
 
-    public LayerMask Ground;
     public Transform FeetPos;
-    public float CheckRadius;
+    GroundCheck _groundCheck;
     bool _isGrounded;
+    public bool IsGrounded
+    {
+        set
+        {
+            _isGrounded = value;
+        }
+    }
 
     public float JumpForce = 10;
     public float MoveSpeed = 5;
@@ -37,14 +43,14 @@ public class Player : MonoBehaviour
     void Start()
     {
         _playerRB = GetComponent<Rigidbody2D>();
+        _groundCheck = GetComponentInChildren<GroundCheck>();
     }
 
     // Update is called once per frame
     void Update()
     {
         _moveInput = (int)Input.GetAxisRaw("Horizontal");
-
-        _isGrounded = Physics2D.OverlapCircle(FeetPos.position, CheckRadius, Ground);
+        
         if (_playerRB.velocity.y > 0)
         {
             _isGrounded = false;
