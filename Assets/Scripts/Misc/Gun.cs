@@ -19,6 +19,8 @@ public class Gun : MonoBehaviour
         {
             Transform BulletSpawn = gameObject.transform;
             GameObject _bullet = Instantiate(Bullet, BulletSpawn.position + (BulletSpawn.localScale / 2), BulletSpawn.transform.rotation);
+            //Force the bullet into the players dimension
+            _bullet.GetComponent<DimensionTracker>().SetDimension(_bullet, DimensionManager.s_inWorldA);
         }
     }
 }
