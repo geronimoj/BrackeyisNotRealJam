@@ -7,6 +7,7 @@ using UnityEngine;
 public class DimensionProjectile : MonoBehaviour
 {
     public bool m_ignorePlayer = true;
+    public LayerMask Mirror;
     private DimensionTracker _dt = null;
 
     private void Awake()
@@ -24,6 +25,14 @@ public class DimensionProjectile : MonoBehaviour
         //Check if we should ignore the player
         if (m_ignorePlayer && collision.transform.CompareTag("Player"))
             return;
+        //Check if the object is a mirror
+        if(collision.gameObject.layer == Mirror)
+        {
+            m_ignorePlayer = false;
+            gameObject.transform.right = Vector3.Reflect(gameObject.transform.right, -collision.transform.right);
+
+            return;
+        }
         //Attempt to get dimension tracker
         var tracker = collision.transform.gameObject.GetComponent<DimensionTracker>();
         //Toggle the world of the object
