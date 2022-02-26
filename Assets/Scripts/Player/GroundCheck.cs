@@ -13,9 +13,17 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ground") && collision.gameObject.layer == _player.gameObject.layer)
+        if (_player.PlayerRB.velocity.y >= -1 || _player.PlayerRB.velocity.y <= 0.5)
         {
-            _player.IsGrounded = true;
+            if (collision.CompareTag("Ground") && collision.gameObject.layer == _player.gameObject.layer)
+            {
+                _player.IsGrounded = true;
+            }
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        _player.IsGrounded = false;
     }
 }

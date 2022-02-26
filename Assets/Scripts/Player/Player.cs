@@ -10,6 +10,13 @@ public class Player : MonoBehaviour
 {
     public static Player Instance;
     Rigidbody2D _playerRB;
+    public Rigidbody2D PlayerRB
+    {
+        get
+        {
+            return _playerRB;
+        }
+    }
 
     public Transform FeetPos;
     GroundCheck _groundCheck;
@@ -50,11 +57,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         _moveInput = (int)Input.GetAxisRaw("Horizontal");
-        
-        if (_playerRB.velocity.y > 0)
-        {
-            _isGrounded = false;
-        }
 
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {

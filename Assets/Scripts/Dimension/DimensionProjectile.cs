@@ -29,8 +29,8 @@ public class DimensionProjectile : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Mirror"))
         {
             m_ignorePlayer = false;
-            gameObject.transform.right = Vector3.Reflect(gameObject.transform.right, -collision.transform.right);
-            Debug.Log("Ping");
+            gameObject.transform.right = Vector3.Reflect(gameObject.transform.right, collision.contacts[0].normal);
+
             return;
         }
         //Attempt to get dimension tracker
